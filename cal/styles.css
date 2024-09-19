@@ -1,0 +1,19 @@
+*{
+    background-color: aqua;
+}
+.cal{
+    margin:200px 500px;
+    text-align: center;
+    border: 2px solid black;
+    height:350px ;
+    width: 300px;
+    background-color: white;
+}
+button{
+    padding:5px 8px;
+    margin:5px;
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}

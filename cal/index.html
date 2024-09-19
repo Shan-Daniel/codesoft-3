@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index4.css">
+</head>
+<body>
+    <div class="cal">
+        <h1>Calculator</h1>
+        <p id="display"></p><br>
+        <button onclick="chooseValue('1')">1</button>
+        <button onclick="chooseValue('2')">2</button>
+        <button onclick="chooseValue('3')">3</button>
+        <button onclick="chooseValue('+')">+</button><br>
+        <button onclick="chooseValue('4')">4</button>
+        <button onclick="chooseValue('5')">5</button>
+        <button onclick="chooseValue('6')">6</button>
+        <button onclick="chooseValue('-')">-</button><br>
+        <button onclick="chooseValue('7')">7</button>
+        <button onclick="chooseValue('8')">8</button>
+        <button onclick="chooseValue('9')">9</button>
+        <button onclick="chooseValue('')"></button><br>
+        <button onclick="chooseValue('0')">0</button>
+        <button onclick="clearDisplay()">clr</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="chooseValue('/')">/</button><br>
+    </div>
+    <script>
+        function chooseValue(value){
+            document.getElementById('display').innerText+=value;
+        }
+        function clearDisplay(){
+            document.getElementById('display').innerText ='';
+        }
+        function calculate(){
+            var val=document.getElementById('display').innerText;
+            var res;
+            try{
+                res=eval(val);
+                document.getElementById('display').innerText=res;
+            }
+            catch(error){
+                document.getElementById('display').innerText+='Error';
+            }
+        }
+    </script>
+</body>
+</html>
